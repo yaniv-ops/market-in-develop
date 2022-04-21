@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block title %}Sell-Item{% endblock%}
+{% block content %}
+<h2>Registration Form</h2>
+{% for field, errors in form.errors.items() %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{ ', '.join(errors) }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
+{% for field, errors in form.contact_info.errors.items() %}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{ ', '.join(errors) }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
+<form method="POST">
+    {{ form.hidden_tag () }}
+    <div class="search-bar">
+        <ul>
+            <li>{{ form.title.label }} {{ form.title }}</li>
+            <li>{{ form.description.label }} {{ form.description }}</li>
+            <li>{{ form.area_of_service.label }} {{ form.area_of_service }}</li>
+            <li>{{ form.wallet_add.label }} {{ form.wallet_add }}</li>
+            <li>{{ form.contact_info.label }} {{ form.contact_info }}</li>
+            {{ form.submit(class='search-button')}}
+       </ul>
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock%}
+{% block search_bar %}
+<h1>Search Item</h1>
+<form method="POST">
+    {{ search_bar.hidden_tag() }}
+    <div class="search-bar">
+        {{ search_bar.search_string.label(class='search-bar-label') }}
+        {{ search_bar.search_string(class='search-field')}}
+        {{ search_bar.submit(class='search-button')}}
+    </div>
+</form>
+{% endblock %}
+{% block content %}
+<button class="menu-button"><a href="{{ url_for('stock') }}">Buy Item</button>
+<button class="menu-button"><a href="{{ url_for('sell_item') }}">Sell Item</button>
+<button class="menu-button">Most traded</button>
+<button class="menu-button">Most expansive</button>
+<button class="menu-button">Confirm Deal</button>
+<button class="menu-button">Featured Item</button>
+{% endblock %}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device=width, initial-scale=1.0">
+    {% block styles %}
+    {{ bootstrap.load_css() }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/css/intlTelInput.css">
+    {% endblock %}
+    <link href="../static/css/styles.css" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- <Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+
+    {% endblock %}
+</head>
+<body>
+    <div id="header">
+        <h1>Welcome to the GrandExchange IRL!!!</h1>
+        <div class="run-banner">
+            <img src="https://www.runescape.com/img/rsp777/grand_exchange/ticker_end.png">
+            <img src="https://www.runescape.com/img/rsp777/grand_exchange/ticker_back.gif">
+            <img src="https://www.runescape.com/img/rsp777/grand_exchange/ticker_back.gif">
+            <img src="https://www.runescape.com/img/rsp777/grand_exchange/ticker_back.gif">
+            <img src="https://www.runescape.com/img/rsp777/grand_exchange/ticker_back.gif">
+            <img src="https://www.runescape.com/img/rsp777/grand_exchange/ticker_end.png">
+        </div>
+    </div>
+    <div id="content">
+        <img src="https://www.runescape.com/img/rsp777/grand_exchange/title.png">
+        <div id="top-buttons">
+            <button class="top-button">Overview</button>
+            <button class="top-button">Search</button>
+            <button class="top-button">Market Movers</button>
+        </div>
+    </div>
+
+    <img class="scroll" src="https://www.runescape.com/img/rsp777/scroll/backdrop_765_bottom.gif">
+    <div class="scroll-content">
+        {% block search_bar %}
+        {% endblock %}
+        <div id="box-of-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    <img class="scroll-bottom" src="https://www.runescape.com/img/rsp777/scroll/backdrop_765_bottom.gif">
+    <div class="footer">
+        <img src="../static/images/img.png" style="max-width: 5%; max-height: 2%; margin-right: 30px;">
+        <p style="display: inline-block; width: 20%; padding: 0 70px; color: white;">
+            This site is meant only for amusement and fun , it meant to be a contribute , don't use it commercially , there are
+            copyrights regarding some contents , you can upload it only for your own studies or amusement , such as i do .
+            have fun , i'm available for work at <span style="color: green;">yaniv.ayalon@gmail.com</span></p>
+    </div>
+
+    {% block scripts %}
+    {{ bootstrap.load_js() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/js/intlTelInput.min.js"></script>
+    {% endblock %}
+</body>
+</html>

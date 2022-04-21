@@ -1,0 +1,146 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    text-align: center;
+    background-image: url("https://www.runescape.com/img/rsp777/bg2.jpg");
+    background-repeat: repeat-y;
+    background-position: center;
+
+     }
+
+#header {
+    margin-top: 50px;
+    -webkit-text-stroke: 2px black;
+    font-family: sans; color: yellow;
+
+}
+
+h1 {
+    margin: 0;
+}
+
+
+.run-banner {
+    margin-top: 50px;
+}
+
+#top-buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.top-button {
+    display: inline-block;
+    position: relative;
+    color: green;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.top-button:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.top-button:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+
+.scroll {
+    display: block;
+    margin: auto;
+    position: relative;
+    top :20px;
+}
+
+.scroll-content {
+    background-image: url('https://www.runescape.com/img/rsp777/scroll/backdrop_745.gif');
+    background-repeat: repeat-y;
+    background-position: center;
+    width: 40%;
+    margin: auto;
+    padding: 10px 10px 0 0;
+
+
+}
+
+
+.scroll-bottom {
+    display: block;
+    margin: auto;
+    position: relative;
+    bottom: 25px;
+}
+
+
+.search-bar {
+    text-align: left;
+    background: rgba(60,39,11,0.5);
+    box-shadow: 0 0 3px 3px #4a381f;
+    display: inline-block;
+    width: 85%;
+    padding : 10px;
+    margin : 10px 0;
+
+}
+
+.search-bar-label {
+    display: inline-block;
+    width: 10%;
+    padding-right: 10px;
+}
+
+.search-field {
+    width: 70%;
+    margin-right: 30px;
+}
+
+
+.menu-button {
+    background: url("https://www.runescape.com/img/rsp777/grand_exchange/overview-button.gif");
+    height: 170px;
+    width: 190px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    margin-right: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.menu-button:hover {
+  background-color: #4CAF50;
+  color: black;
+}
+
+.sell-block {
+    align-text: left;
+    padding-bottom: 30px;
+    align-text: left;
+    }
+
+
+ul {
+    display: block;
+
+        }
+
+ul li textarea {
+    resize: both;
+    overflow: auto;
+        }
+

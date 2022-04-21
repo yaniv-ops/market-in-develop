@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Stock-page{% endblock%}
+{% block search_bar %}
+<h1>Search Item</h1>
+<form method="POST">
+    {{ search_bar.hidden_tag() }}
+    <div class="search-bar">
+        {{ search_bar.search_string.label(class='search-bar-label') }}
+        {{ search_bar.search_string(class='search-field')}}
+        {{ search_bar.submit(class='search-button')}}
+    </div>
+</form>
+{% endblock %}
+{% block content %}
+{% endblock %}
