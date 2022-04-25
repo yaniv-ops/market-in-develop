@@ -37,7 +37,7 @@ def sell_item():
 @app.route('/stock')
 def stock():
     search_bar = SearchBar()
-    items_to_show = Item()
-    return render_template('stock.html', search_bar=search_bar)
+    items_to_show = Item.query.all()
+    return render_template('stock.html', search_bar=search_bar, items_to_show=items_to_show)
 if __name__ == '__main__':
     app.run(debug=True)

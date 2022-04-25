@@ -12,4 +12,22 @@
 </form>
 {% endblock %}
 {% block content %}
+<h2>Items for sale</h2>
+<table>
+    <tr>
+        <th>Product id</th>
+        <th>Product name</th>
+        <th>Area's of service </th>
+        <th>Time of service </th>
+        <th>Score</th>
+    </tr>
+    {% for item in items_to_show %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.area_of_service }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
 {% endblock %}
